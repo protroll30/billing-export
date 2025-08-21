@@ -1,0 +1,6 @@
+{
+	"source_project_id": "gcs-billing-export",
+	"source_dataset_id": "public",
+	"source_table_id": "gcs_billing_export",
+	"destination_bucket": "snowflake_project"
+}

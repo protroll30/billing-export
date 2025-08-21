@@ -1,0 +1,1 @@
+0 13 * * * su - ubuntu -c "cd /opt/billing-export && nohup python3 /opt/billing-export/src/export.py --config_file conf/dev.json"

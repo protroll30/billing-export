@@ -108,33 +108,7 @@ Below are the features of the script-
     
     Status file is also stored locally under ***/billing-export/<table_id>/process/extract_status_file.json***
     
-    Below is the structure of the file. A success record will have a status flag **"status": "success"**, while a failed or unsuccessful export will NOT have **"status"** flag.
     
-````
-    "extract_status": [
-        {
-            "run_timestamp": "20191008 23:34:52.038",
-            "export_date_partition": "20190705"
-        },
-        {
-            "run_timestamp": "20191008 23:34:14.106",
-            "export_date_partition": "20190704",
-            "bytes": 229679399,
-            "status": "success"
-        },
-        {
-            "run_timestamp": "20191008 23:33:40.582",
-            "export_date_partition": "20190703",
-            "bytes": 248908143,
-            "status": "success"
-        },
-        {
-            "run_timestamp": "20191008 23:33:08.976",
-            "export_date_partition": "20190702",
-            "bytes": 228758470,
-            "status": "success"
-        },
-        ....
 ````
    
     
@@ -170,17 +144,7 @@ Below are the features of the script-
         logName="projects/gcs-billing-export/logs/billing-export"
     
          
-        Showing logs from the last hour ending at 3:35 AM (PDT)
-  
-   
-        2019-10-09T06:40:20.516441Z export.py:378 DEBUG    gcs_billing_export - No of rows in the destination export JSON:gcs_billing_export/20190716/billing-export-000000000000.json for date partition:20190716 is : 255240 rows D 
-        2019-10-09T06:39:35.890894Z export.py:407 DEBUG    gcs_billing_export - No of rows extracted from date partition:20190716 of source table:gcs_billing_export : 255240 rows D 
-        2019-10-09T06:39:35.637039Z export.py:403 DEBUG    gcs_billing_export - Exported gcs-billing-export:public.gcs_billing_export20190716 to gs://<bucket name>/gcs_billing_export/20190716/billing-export-*.json D 
-        2019-10-09T06:39:16.428456Z export.py:472 DEBUG    gcs_billing_export - Export partition completed successfully for : 20190715 
-        2019-10-09T06:39:16.423305Z export.py:378 DEBUG    gcs_billing_export - No of rows in the destination export JSON:gcs_billing_export/20190715/billing-export-000000000000.json for date partition:20190715 is : 261944 rows D 
-        2019-10-09T06:38:28.084835Z export.py:407 DEBUG    gcs_billing_export - No of rows extracted from date partition:20190715 of source table:gcs_billing_export : 261944 rows D 
-        2019-10-09T06:38:27.868356Z export.py:403 DEBUG    gcs_billing_export - Exported gcs-billing-export:public.gcs_billing_export20190715 to gs://<bucket name>/gcs_billing_export/20190715/billing-export-*.json D 
-
+        
 ```` 
 
 8. **Manual run** - Exporter script can be run manually. 
